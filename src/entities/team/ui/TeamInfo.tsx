@@ -7,9 +7,14 @@ export function TeamInfo({points, players, place, total_kills}: Team) {
       {players.map(({username, kills}) => <Player key={username} kills={kills} username={username}/>)}
     </div>
     <div className={'flex justify-around bg-[#101318] py-[12px] px-[24px]'}>
-      <span>Points: {points}</span>
-      <span>Место: {place}</span>
-      <span>Всего убийств: {total_kills}</span>
+      <div className={'text-[14px] gap-2 flex'}><span className={'text-[#FAFAFA66]'}>Points:</span>
+        <span>{points}</span>
+      </div>
+      <div className={'text-[14px] gap-2 flex'}><span className={'text-[#FAFAFA66]'}>Место:</span>
+        <span>{place}</span>
+      </div>
+      <div className={'text-[14px] gap-2 flex'}><span className={'text-[#FAFAFA66]'}>Всего
+        убийств:</span> <span>{total_kills}</span></div>
     </div>
   </div>)
 }
