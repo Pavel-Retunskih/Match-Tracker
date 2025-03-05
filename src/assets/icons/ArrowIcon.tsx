@@ -4,14 +4,18 @@ const ArrowIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
     <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
          xmlnsXlink="http://www.w3.org/1999/xlink" {...props} ref={ref}>
       <defs>
-        <clipPath id="clip69_1486">
-          <rect id="chevron-up" rx="0.000000" width="27.200001" height="27.200001"
-                transform="translate(0.400000 0.400000)" fill="white" fill-opacity="0"/>
+        <clipPath id="clip68_8409">
+          <rect id="mainIcon/arrow drop-list down" rx="0.000000" width="26.667219" height="26.667219"
+                transform="translate(0.666390 0.666390)" fill="white" fillOpacity="0"/>
         </clipPath>
       </defs>
-      <g clip-path="url(#clip69_1486)">
-        <path id="Icon" d="M7 17.5L14 10.5L21 17.5" stroke="#FAFAFA" strokeOpacity="1.000000" strokeWidth="2.000000"
-              strokeLinejoin="round" strokeLinecap="round"/>
+      <g clip-path="url(#clip68_8409)">
+        <path id="Vector"
+              d="M9.47 10.5L14 15.02L18.53 10.5C18.98 10.04 19.72 10.04 20.17 10.5C20.63 10.95 20.63 11.69 20.17 12.14L14.82 17.5C14.36 17.95 13.63 17.95 13.17 17.5L7.82 12.14C7.36 11.69 7.36 10.95 7.82 10.5C8.27 10.05 9.02 10.04 9.47 10.5Z"
+              fill="#FFFFFF" fillOpacity="1.000000" fillRule="nonzero"/>
+        <path id="Vector"
+              d="M15.13 13.89L18.53 10.5C18.98 10.04 19.72 10.04 20.17 10.5C20.63 10.95 20.63 11.69 20.17 12.14L14.82 17.5C14.36 17.95 13.63 17.95 13.17 17.5L7.82 12.14C7.36 11.69 7.36 10.95 7.82 10.5C8.27 10.05 9.02 10.04 9.47 10.5L12.87 13.89L14 15.02L15.13 13.89Z"
+              fill="#FFFFFF" fillOpacity="1.000000" fillRule="evenodd"/>
       </g>
     </svg>
 )
