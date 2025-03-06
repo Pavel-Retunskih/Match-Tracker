@@ -2,7 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 export const appSlice = createSlice({
   initialState: {
-    filter: 'all'
+    filter: 'All'
   },
   name: 'AppSlice',
   reducers: {

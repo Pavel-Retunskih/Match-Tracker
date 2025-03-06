@@ -9,19 +9,19 @@ import {changeFilter} from "../../app/slice/slice.ts";
 export function Header() {
   const dispatch = useAppDispatch();
   const data = [
-    {label: 'Match preparing', value: 'Scheduled'},
-    {label: 'Live', value: 'Ongoing'},
-    {label: 'Finished', value: 'Finished'},
     {label: 'Все статусы', value: 'All'},
+    {label: 'Live', value: 'Ongoing'},
+    {label: 'Match preparing', value: 'Scheduled'},
+    {label: 'Finished', value: 'Finished'},
   ]
   const handleChangeSelect = (filter: string) => {
     dispatch(changeFilter(filter));
   }
 
   const {refetch, isFetching, isError} = useGetMatchesQuery()
-  return <header className={'flex justify-between items-center mt-10'}>
-    <div>
-      <h1 className={'text-4xl text-pop font-tactic font-black text-mint-500'}>Match Tracker</h1>
+  return <header className={'flex justify-between items-center mt-10 flex-wrap'}>
+    <div className={'flex gap-6 items-center flex-wrap'}>
+      <h1 className={'text-4xl text-pop font-tactic font-black text-mint-500 text-nowrap'}>Match Tracker</h1>
       <Select data={data} onChange={handleChangeSelect}/>
     </div>
 

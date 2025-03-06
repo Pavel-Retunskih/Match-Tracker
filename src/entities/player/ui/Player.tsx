@@ -12,7 +12,7 @@ export function Player({username, kills}: PlayerType) {
             <span>{username}</span></div>
         </div>
         <div className={'flex items-center gap-2'}>
-          <span className={'text-[14px] text-[#FAFAFA66]'}>Убийств:</span>
+          <span className={'text-s text-[#FAFAFA66]'}>Убийств:</span>
           <span>{kills}</span>
         </div>
 

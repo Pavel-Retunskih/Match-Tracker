@@ -13,9 +13,10 @@ export function Score({homeScore, awayScore, status}: Props) {
     Finished: {color: 'bg-[#EB0237]', description: 'Finished'},
   }
   return <div className={'flex flex-col gap-1 justify-center items-center'}>
-    <div className={'flex gap-2 text-inter text-[20px] font-semibold leading-tight'}><span>{homeScore}</span><span
+    <div className={'flex gap-2 text-inter text-[20px] font-semibold leading-tight'}>
+      <span>{homeScore}</span><span
         className={'animate-pulse'}>:</span><span>{awayScore}</span></div>
     <span
-        className={`${statusColor[status].color} min-w-[96px] px-5 py-2 text-[12px] rounded-md text-center`}>{statusColor[status].description}</span>
+        className={`${statusColor[status].color} min-w-[96px] px-5 py-2 text-[12px] rounded-md text-center leading-tight`}>{statusColor[status].description}</span>
   </div>
 }
