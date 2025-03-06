@@ -1,11 +1,30 @@
 import WarningIcon from "../../assets/icons/WarningIcon.tsx";
 import RefreshIcon from "../../assets/icons/RefreshIcon.tsx";
 import {useGetMatchesQuery} from "../matchesList/api/appApi.ts";
+import {Select} from "../../shared/select/select.tsx";
+import {useAppDispatch} from "../../app/hooks/hooks.ts";
+import {changeFilter} from "../../app/slice/slice.ts";
+
 
 export function Header() {
+  const dispatch = useAppDispatch();
+  const data = [
+    {label: 'Match preparing', value: 'Scheduled'},
+    {label: 'Live', value: 'Ongoing'},
+    {label: 'Finished', value: 'Finished'},
+    {label: 'Все статусы', value: 'All'},
+  ]
+  const handleChangeSelect = (filter: string) => {
+    dispatch(changeFilter(filter));
+  }
+
   const {refetch, isFetching, isError} = useGetMatchesQuery()
   return <header className={'flex justify-between items-center mt-10'}>
-    <h1 className={'text-4xl text-pop font-tactic font-black text-mint-500'}>Match Tracker</h1>
+    <div>
+      <h1 className={'text-4xl text-pop font-tactic font-black text-mint-500'}>Match Tracker</h1>
+      <Select data={data} onChange={handleChangeSelect}/>
+    </div>
+
     <div className={'flex gap-2'}>
       {isError &&
           <div
