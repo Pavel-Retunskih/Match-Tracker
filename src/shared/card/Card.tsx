@@ -6,7 +6,7 @@ type Props = {
 
 export function Card({children}: Props) {
   return (
-      <div className={'p-4 flex flex-col bg-[#0B0E12]  my-3 rounded-md'}>
+      <div className={'p-4 flex flex-col bg-primary-card  my-3 rounded-md'}>
         {children}
       </div>
   )

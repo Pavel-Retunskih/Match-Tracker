@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import "tailwindcss";
 
 @font-face {
     font-family: 'Tactic_Sans';
@@ -11,42 +10,9 @@
     font-style: normal;
 }
 
-
-@theme{
-    --font-tactic: Tactic_Sans, sans-serif;
-    --font-inter: "Inter", serif;
-}
-@layer utilities {
-    @keyframes spin-reverse {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(-360deg);
-        }
-    }
-    @keyframes rotating {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(180deg);
-        }
-    }
-    .animate-rotating {
-        animation: rotating 1s ease-in;
-    }
-
-    .animate-spin-reverse {
-        animation: spin-reverse 1s linear infinite;
-        will-change: transform;
-    }
-}
-
-body {
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 
