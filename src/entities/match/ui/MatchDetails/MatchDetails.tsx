@@ -9,7 +9,7 @@ type Props = {
 
 export function MatchDetails({homeTeam, awayTeam, openDetails}: Props) {
   return <div
-      className={`flex flex-wrap justify-between transition-all duration-1000 overflow-hidden ${
+      className={`flex flex-col lg:flex-row gap-2 justify-between transition-all duration-1000 overflow-hidden ${
           openDetails ? 'opacity-100 max-h-96 scale-100' : 'opacity-0 max-h-0 scale-95'
       }`}>
     <TeamInfo {...homeTeam}/>

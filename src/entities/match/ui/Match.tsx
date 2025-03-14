@@ -9,13 +9,19 @@ export function MatchCard({awayTeam, homeTeam, homeScore, awayScore, status}: Ma
   const [openDetails, setOpenDetails] = useState<boolean>(false);
 
   return <Card>
-    <div className={'flex gap-2'}>
+    <div className={'flex flex-col lg:flex-row gap-2'}>
       <MatchInfo status={status} homeTeamName={homeTeam.name} awayScore={awayScore} awayTeamName={awayTeam.name}
                  homeScore={homeScore}/>
-      <button onClick={() => setOpenDetails(prev => !prev)}><ArrowIcon
-          className={`transition-transform duration-300 ${openDetails ? 'rotate-180' : ''}`}/>
+      <button onClick={() => setOpenDetails(prev => !prev)} className={'hidden lg:flex justify-center items-center'}>
+        <ArrowIcon
+            className={`transition-transform duration-300 ${openDetails ? 'rotate-180' : ''}`}/>
       </button>
     </div>
     <MatchDetails openDetails={openDetails} awayTeam={awayTeam} homeTeam={homeTeam}/>
+    <button onClick={() => setOpenDetails(prev => !prev)}
+            className={'flex lg:hidden justify-center items-center '}>
+      <ArrowIcon
+          className={`transition-transform duration-300 ${openDetails ? 'rotate-180' : ''}`}/>
+    </button>
   </Card>
 }
