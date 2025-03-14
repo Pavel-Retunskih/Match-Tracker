@@ -17,6 +17,6 @@ export function Score({homeScore, awayScore, status}: Props) {
       <span>{homeScore}</span><span
         className={'animate-pulse'}>:</span><span>{awayScore}</span></div>
     <span
-        className={`${statusColor[status].color} min-w-[96px] px-5 py-2 text-[12px] rounded-md text-center leading-tight`}>{statusColor[status].description}</span>
+        className={`${statusColor[status].color} min-w-[96px] px-5 py-[6px] text-[12px] rounded-md text-center leading-tight`}>{statusColor[status].description}</span>
   </div>
 }
