@@ -22,12 +22,15 @@ export const matchApi = createApi({
         try {
           await cacheDataLoaded;
           ws.addEventListener('message', listener)
+          console.log('Websocket connected')
         } catch (err) {
           console.log(err)
+          console.log('Websocket error')
         }
         await cacheEntryRemoved
         ws.removeEventListener('message', listener);
         ws.close()
+        console.log('Websocket disconnect')
       }
 
     }),
