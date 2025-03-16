@@ -1,5 +1,6 @@
 import {MatchesList} from "./pages/matchesList/ui/MatchesList.tsx";
-import {Header} from "./pages/header/Header.tsx";
+import {Header} from "./widgets/header/Header.tsx";
+
 
 export function App() {
   return (

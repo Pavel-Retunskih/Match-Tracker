@@ -1,26 +1,12 @@
 import WarningIcon from "../../assets/icons/WarningIcon.tsx";
 import RefreshIcon from "../../assets/icons/RefreshIcon.tsx";
-import {useGetMatchesQuery} from "../matchesList/api/appApi.ts";
-import {Select} from "../../shared/select/select.tsx";
-import {useAppDispatch} from "../../app/hooks/hooks.ts";
-import {changeFilter} from "../../app/slice/slice.ts";
-import {memo, useCallback, useMemo} from "react";
+import {memo} from "react";
+import {useGetMatchesQuery} from "../../pages/matchesList/api/appApi.ts";
+import {MatchesFilterSelect} from "../../features/ui/MatchesFilterSelect.tsx";
 
 
 export const Header = memo(() => {
   const {refetch, isFetching, isError} = useGetMatchesQuery()
-  const dispatch = useAppDispatch();
-
-  const data = useMemo(() => [
-    {label: 'Все статусы', value: 'All'},
-    {label: 'Live', value: 'Ongoing'},
-    {label: 'Match preparing', value: 'Scheduled'},
-    {label: 'Finished', value: 'Finished'},
-  ], []);
-
-  const handleChangeSelect = useCallback((filter: string) => {
-    dispatch(changeFilter(filter));
-  }, [dispatch])
 
 
   return <header className={'flex flex-col lg:flex-row justify-between items-center w-full'}>
@@ -28,7 +14,7 @@ export const Header = memo(() => {
       <h1 className={'text-[32px] sm sm:text-4xl text-center lg:text-left font-tactic font-black text-nowrap'}>
         Match Tracker
       </h1>
-      <Select data={data} onChange={handleChangeSelect}/>
+      <MatchesFilterSelect/>
     </div>
 
     <div
