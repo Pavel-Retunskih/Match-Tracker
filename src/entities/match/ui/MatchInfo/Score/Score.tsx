@@ -35,7 +35,6 @@ export function Score({homeScore, awayScore, status}: Props) {
   return (
       <div className={"flex flex-col gap-1 justify-center items-center"}>
         <div className={"flex gap-2 text-inter text-[20px] font-semibold leading-tight"}>
-          {/* Анимация для homeScore */}
           <span
               className={`w-[20px] transition-opacity duration-500 ${
                   isHomeScoreScoreChanged ? "opacity-0" : "opacity-100"
@@ -53,7 +52,7 @@ export function Score({homeScore, awayScore, status}: Props) {
         </span>
         </div>
         <span
-            className={`${statusColor[status].color} min-w-[96px] px-5 py-[6px] text-[12px] rounded-md text-center leading-tight`}
+            className={`${statusColor[status].color} min-w-[92px] px-2 py-[6px] text-[12px] rounded-md text-center leading-tight`}
         >
         {statusColor[status].description}
       </span>
