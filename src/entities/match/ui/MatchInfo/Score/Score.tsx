@@ -19,7 +19,6 @@ export function Score({homeScore, awayScore, status}: Props) {
     Finished: {color: "bg-[#EB0237]", description: "Finished"},
   };
 
-  // Отслеживаем изменения в счете
   useEffect(() => {
     if (homeScore !== prevHomeScore) {
       setPrevHomeScore(prevHomeScore);
