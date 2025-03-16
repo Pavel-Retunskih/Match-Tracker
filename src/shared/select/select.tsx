@@ -20,7 +20,7 @@ export const Select = memo(({data, onChange}: Props) => {
     setIsOpen(false)
   }
 
-  return <div className={'relative w-full'}>
+  return <div className={'relative w-full lg:w-[170px] flex-shrink-0'}>
     <button onClick={() => setIsOpen(prev => !prev)}
             className={'hover:bg-[#0B0E12] hover:text-[#B4B5B6] w-full rounded-md py-[10px] px-4' +
                 ' bg-[#0F1318]'}>{selected.label}</button>
